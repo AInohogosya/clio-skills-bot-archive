@@ -1,0 +1,1 @@
+ALTER TABLE `skill_conversations` ADD `sourceId` varchar(128);

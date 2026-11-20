@@ -2,6 +2,8 @@
 
 Clio Skills Bot is a skill-driven assistant workbench that routes natural-language requests to the appropriate built-in skill. It performs calculations, conversions, text utilities, and other deterministic tasks locally, while clearly separating requests that use external services such as search, Wikipedia, or translation.
 
+<img width="1024" height="572" alt="Clio Skills Bot interface" src="https://github.com/user-attachments/assets/ed78ba71-c5f7-4f3e-962a-51e083c1b516" />
+
 ## Highlights
 
 - **Automatic skill routing** — Matches input against an ordered set of Unai-compatible skills and executes the first match.
@@ -30,11 +32,27 @@ Use `/help` in the chat to list available skill IDs, or `/help <skill_id>` for h
 - Node.js 20 or later
 - pnpm 10 (`corepack enable` or `npm install -g pnpm@10`)
 
-### Development
+### Quick Start (one command)
+
+macOS / Linux:
 
 ```bash
-git clone https://github.com/AInohogosya/clio-skills-bot.git
-cd clio-skills-bot
+./start.sh
+```
+
+Windows:
+
+```cmd
+start.cmd
+```
+
+The launcher verifies Node.js, installs dependencies (and pnpm, if missing) on first run, and starts the development server. For a production build and start in one step, run `./start.sh prod` (or `start.cmd prod`).
+
+### Development (manual)
+
+```bash
+git clone https://github.com/AInohogosya/Clio-Skills-Bot.git
+cd Clio-Skills-Bot
 cp .env.example .env   # fill in your own values; never commit .env
 pnpm install
 pnpm dev
